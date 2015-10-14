@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>README – plug_assign v1.0.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.10.0">
+    <link rel="stylesheet" href="dist/app.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="extras">
+
+<div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="Plug.Assign.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        plug_assign
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+<h1>Plug.Assign</h1>
+<p>A simple plug to allow setting variables in a connection.</p>
+<h2 id="Installation"> Installation</h2><p>The package can be installed from Hex:</p>
+<ol>
+<li><p>Add plug_assign to your list of dependencies in <code class="inline">mix.exs</code>:</p>
+<pre><code class="elixir">def deps do
+  [{:plug_assign, &quot;~&gt; 1.0.0&quot;}]
+end</code></pre>
+</li>
+<li><p>Fetch and install the dependencies</p>
+<pre><code class="elixir">$ mix deps.get</code></pre>
+</li>
+<li><p>Define assigns as part of your plug stack</p>
+<pre><code class="elixir">plug Plug.Assign, foo: &quot;bar&quot;, bar: true, baz: 42</code></pre>
+<p>  Or Set variables for templates to use in a Phoenix Pipeline</p>
+<pre><code class="elixir">pipeline :admin do
+  plug Plug.Assign, admin: true
+end</code></pre>
+<p>  Or directly in a Phoenix Controller</p>
+<pre><code class="elixir">defmodule Blog.Admin.PostController do
+  use Blog.Web, :Controller
+
+  plug Plug.Assign, subsection: :posts
+  plug Plug.Assign, %{read_request: true} when action in [:index, :show]
+  ...
+end</code></pre>
+</li>
+</ol>
+
+    <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+    </footer>
+  </div>
+</section>
+</div>
+    <script src="dist/app.js"></script>
+  </body>
+</html>
+
