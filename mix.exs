@@ -12,7 +12,7 @@ defmodule Plug.Assign.Mixfile do
      description: description,
      package: package,
      docs: docs,
-     source_url: "http://github.com/nshafer/plug_assign",
+     source_url: "https://github.com/nshafer/plug_assign",
      homepage_url: "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html",
    ]
   end
@@ -40,11 +40,11 @@ defmodule Plug.Assign.Mixfile do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README.md", "LICENSE*"],
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Nathan Shafer"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "http://github.com/nshafer/plug_assign",
-               "Docs" => "http://hexdocs.pm",
+      links: %{"GitHub" => "https://github.com/nshafer/plug_assign",
+               "Docs" => "http://hexdocs.pm/plug_assign",
                "Howto" => "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html"}
     ]
   end
