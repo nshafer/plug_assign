@@ -60,7 +60,7 @@
 
 
 <h1>Plug.Assign</h1>
-<p>A simple plug to allow setting variables in a connection.</p>
+<p>A simple plug to allow setting variables in a connection.  For example, as a way to set default variables for a controller, view or template to use in a Phoenix app.</p>
 <h2 id="Installation"> Installation</h2><p>The package can be installed from Hex:</p>
 <ol>
 <li><p>Add plug_assign to your list of dependencies in <code class="inline">mix.exs</code>:</p>
@@ -69,7 +69,7 @@
 end</code></pre>
 </li>
 <li><p>Fetch and install the dependencies</p>
-<pre><code class="elixir">$ mix deps.get</code></pre>
+<pre><code class="sh">$ mix deps.get</code></pre>
 </li>
 <li><p>Define assigns as part of your plug stack</p>
 <pre><code class="elixir">plug Plug.Assign, foo: &quot;bar&quot;, bar: true, baz: 42</code></pre>
