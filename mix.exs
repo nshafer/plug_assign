@@ -11,7 +11,7 @@ defmodule Plug.Assign.Mixfile do
      deps: deps,
      description: description,
      package: package,
-     docs: docs,
+     docs: [extras: ["README.md", "LICENSE.md"], main: "extra-readme"],
      source_url: "https://github.com/nshafer/plug_assign",
      homepage_url: "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html",
    ]
@@ -31,11 +31,6 @@ defmodule Plug.Assign.Mixfile do
     """
     A simple plug to allow setting variables in a connection.
     """
-  end
-
-  defp docs do
-    [main: "Plug.Assign",
-     extras: ["README.md", "LICENSE.md"]]
   end
 
   defp package do
