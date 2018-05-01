@@ -62,31 +62,28 @@
 <h1>Plug.Assign</h1>
 <p>A simple plug to allow setting variables in a connection.  For example, as a way to set default variables for a controller, view or template to use in a Phoenix app.</p>
 <h2 id="Installation"> Installation</h2><p>The package can be installed from Hex:</p>
-<ol>
-<li><p>Add plug_assign to your list of dependencies in <code class="inline">mix.exs</code>:</p>
+<p>Add plug_assign to your list of dependencies in <code class="inline">mix.exs</code>:</p>
 <pre><code class="elixir">def deps do
-  [{:plug_assign, &quot;~&gt; 1.0.0&quot;}]
-end</code></pre>
-</li>
-<li><p>Fetch and install the dependencies</p>
+      [{:plug_assign, &quot;~&gt; 1.0.0&quot;}]
+    end</code></pre>
+<p>Fetch and install the dependencies</p>
 <pre><code class="sh">$ mix deps.get</code></pre>
-</li>
-<li><p>Define assigns as part of your plug stack</p>
+<p>Define assigns as part of your plug stack</p>
 <pre><code class="elixir">plug Plug.Assign, foo: &quot;bar&quot;, bar: true, baz: 42</code></pre>
-<p>  Or Set variables for templates to use in a Phoenix Pipeline</p>
+<p>Or Set variables for templates to use in a Phoenix Pipeline</p>
 <pre><code class="elixir">pipeline :admin do
-  plug Plug.Assign, admin: true
-end</code></pre>
-<p>  Or directly in a Phoenix Controller</p>
+      plug Plug.Assign, admin: true
+    end</code></pre>
+<p>Or directly in a Phoenix Controller</p>
 <pre><code class="elixir">defmodule Blog.Admin.PostController do
-  use Blog.Web, :Controller
+      use Blog.Web, :Controller
 
-  plug Plug.Assign, subsection: :posts
-  plug Plug.Assign, %{read_request: true} when action in [:index, :show]
-  ...
-end</code></pre>
-</li>
-</ol>
+      plug Plug.Assign, subsection: :posts
+      plug Plug.Assign, %{read_request: true} when action in [:index, :show]
+      ...
+    end</code></pre>
+<h3>Generate documentation</h3>
+<pre><code class="bash">mix docs</code></pre>
 
     <footer class="footer">
       <p>
