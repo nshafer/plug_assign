@@ -46,7 +46,7 @@ Or directly in a Phoenix Controller
     end
 ```
 
-### Generate documentation
+## Generate documentation
 
 ```bash
     mix docs

@@ -11,20 +11,20 @@ defmodule Plug.Assign.Mixfile do
      deps: deps(),
      description: description(),
      package: package(),
-     docs: [extras: ["README.md", "LICENSE.md"], main: "extra-readme"],
+     docs: [extras: ["README.md", "LICENSE.md"], main: "readme"],
      source_url: "https://github.com/nshafer/plug_assign",
      homepage_url: "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html",
    ]
   end
 
   def application do
-    [applications: [:logger]]
+    []
   end
 
   defp deps do
     [{:plug, "~> 1.0"},
-     {:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.10", only: :dev}]
+     {:earmark, "~> 1.2", only: :dev},
+     {:ex_doc, "~> 0.18", only: :dev}]
   end
 
   defp description do
