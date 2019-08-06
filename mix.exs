@@ -2,19 +2,20 @@ defmodule Plug.Assign.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :plug_assign,
-     name: "plug_assign",
-     version: "1.0.1",
-     elixir: "~> 1.1",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps(),
-     description: description(),
-     package: package(),
-     docs: [extras: ["README.md", "LICENSE.md"], main: "readme"],
-     source_url: "https://github.com/nshafer/plug_assign",
-     homepage_url: "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html",
-   ]
+    [
+      app: :plug_assign,
+      name: "Plug.Assign",
+      version: "1.0.2",
+      elixir: "~> 1.1",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      deps: deps(),
+      description: description(),
+      package: package(),
+      docs: [extras: ["README.md", "LICENSE.md"], main: "readme"],
+      source_url: "https://github.com/nshafer/plug_assign",
+      homepage_url: "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html"
+    ]
   end
 
   def application do
@@ -22,9 +23,10 @@ defmodule Plug.Assign.Mixfile do
   end
 
   defp deps do
-    [{:plug, "~> 1.0"},
-     {:earmark, "~> 1.2", only: :dev},
-     {:ex_doc, "~> 0.18", only: :dev}]
+    [
+      {:plug, "~> 1.5"},
+      {:ex_doc, "~> 0.21.1", only: :dev}
+    ]
   end
 
   defp description do
@@ -38,9 +40,11 @@ defmodule Plug.Assign.Mixfile do
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Nathan Shafer"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/nshafer/plug_assign",
-               "Docs" => "http://hexdocs.pm/plug_assign",
-               "Howto" => "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html"}
+      links: %{
+        "GitHub" => "https://github.com/nshafer/plug_assign",
+        "Docs" => "http://hexdocs.pm/plug_assign",
+        "Howto" => "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html"
+      }
     ]
   end
 end

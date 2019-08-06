@@ -50,6 +50,7 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
 ### Elixir template
 /_build
 /cover
@@ -61,3 +62,5 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 
+# VS Code
+.elixir_ls
