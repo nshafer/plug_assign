@@ -5,8 +5,8 @@ defmodule Plug.Assign.Mixfile do
     [
       app: :plug_assign,
       name: "Plug.Assign",
-      version: "1.0.2",
-      elixir: "~> 1.1",
+      version: "2.0.0",
+      elixir: "~> 1.15.0",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       deps: deps(),
