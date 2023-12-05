@@ -24,8 +24,8 @@ defmodule Plug.Assign.Mixfile do
 
   defp deps do
     [
-      {:plug, "~> 1.5"},
-      {:ex_doc, "~> 0.21.1", only: :dev}
+      {:plug, "~> 1.15"},
+      {:ex_doc, "> 0.0.0", only: :dev}
     ]
   end
 
