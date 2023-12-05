@@ -38,11 +38,11 @@ defmodule Plug.Assign do
         assign(conn, k, v)
 
       {k, _}, conn ->
-        Logger.warn("[Plug.Assign] Invalid key: #{inspect(k)}. Keys must be an atom.")
+        Logger.warning("[Plug.Assign] Invalid key: #{inspect(k)}. Keys must be an atom.")
         conn
 
       var, conn ->
-        Logger.warn(
+        Logger.warning(
           "[Plug.Assign] Invalid assign: #{inspect(var)}. Assigns must be {:key, value}. " <>
             "Use a keyword list or a map with all keys as atoms."
         )
