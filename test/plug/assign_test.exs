@@ -55,7 +55,7 @@ defmodule Plug.AssignTest do
     assert capture_log(fn -> test_invalid_assigns([:five]) end) =~ "Invalid assign"
     assert capture_log(fn -> test_invalid_assigns([:six, 6]) end) =~ "Invalid assign"
     assert capture_log(fn -> test_invalid_assigns([:seven, foo: "foo"]) end) =~ "Invalid assign"
-    assert capture_log(fn -> test_invalid_assigns('eight') end) =~ "Invalid assign"
+    assert capture_log(fn -> test_invalid_assigns(~c"eight") end) =~ "Invalid assign"
 
     assert capture_log(fn -> test_invalid_assigns([{1, "one"}]) end) =~ "Invalid key"
     assert capture_log(fn -> test_invalid_assigns(%{"two" => 2}) end) =~ "Invalid key"

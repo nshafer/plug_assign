@@ -5,14 +5,14 @@ defmodule Plug.Assign.Mixfile do
     [
       app: :plug_assign,
       name: "Plug.Assign",
-      version: "2.0.1",
+      version: "2.0.2",
       elixir: "~> 1.11",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: description(),
       package: package(),
-      docs: [extras: ["README.md", "LICENSE.md"], main: "readme"],
+      docs: [extras: ["README.md", "LICENSE.md", "CHANGELOG.md"], main: "readme"],
       source_url: "https://github.com/nshafer/plug_assign",
       homepage_url: "http://blog.lotech.org/a-phoenix-plug-for-assigning-template-variables.html"
     ]
@@ -37,7 +37,6 @@ defmodule Plug.Assign.Mixfile do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Nathan Shafer"],
       licenses: ["MIT"],
       links: %{

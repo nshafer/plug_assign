@@ -10,7 +10,7 @@ Add plug_assign to your list of dependencies in `mix.exs`:
 
 ```elixir
     def deps do
-      [{:plug_assign, "~> 2.0.1"}]
+      [{:plug_assign, "~> 2.0.2"}]
     end
 ```
 
